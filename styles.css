@@ -46,7 +46,7 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-fieldset, p {
+fieldset, p, figure {
     margin: 0;
     padding: 0;
     border: none;
@@ -187,7 +187,7 @@ a {
 }
 
 .wrapper--infograph {
-    padding: 100px 0 60px;
+    padding: 5% 0 3%;
     max-height: 100vh;
 }
 
@@ -378,6 +378,25 @@ a {
     justify-content: center
 }
 
+@media (max-width: 330px) {
+    .wrapper--home {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-height: 800px) {
+    .header {
+        margin-bottom: 2%;
+    }
+    .wrapper--home {
+        padding: 20px 0 10%;
+    }
+    .infograph-container {
+        width: 30%;
+    }
+}
+
+
 @media (max-width: 1350px) {
     .wrapper {
         padding-left: 50px;
@@ -508,7 +527,10 @@ a {
     }
 
     .home-info {
-        margin-bottom: 15px;
+        margin-bottom: 12%;
+    }
+    .title {
+        margin: 5% 10px;
     }
     .video {
         height: 10.5em;
@@ -586,12 +608,12 @@ a {
         padding-right: 10px;
     }
 
-    body {
-        font-size: 2rem;
+    body, .wrapper--home {
+        font-size: 1.8rem;
     }
 
     .container.header {
-        margin-bottom: 20px;
+        margin-bottom: 7%;
     }
 
     .main-article {
@@ -619,20 +641,11 @@ a {
     .list-item {
         width: 49%;
     }
-}
 
-@media (max-width: 330px) {
-    .wrapper--home {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-height: 800px) {
-    .header {
-        margin-bottom: 4%;
-    }
-
-    .infograph-container {
-        width: 30%;
+    .wrapper--home .container--50 {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
