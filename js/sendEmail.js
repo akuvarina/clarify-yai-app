@@ -1,14 +1,14 @@
 async function sendEmail(emailData) {
-    const body =getEmailBody(emailData);
+    const body = getEmailBody(emailData);
     await Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "info@clarifyy.ai",
-        Password: "95E37398A9A5367626464E836BF59599159B",
-        To: 'clarify.yai@gmail.com',
+        SecureToken : "2beb9b67-7b08-428a-a3bf-c16c89e40234",
+        To: 'info@clarifyy.ai',
         From: "clarify.yai@gmail.com",
         Subject: "ClarifyY.ai: a new demo request",
         Body: body,
     })
+        .then((message) => console.log('ok', message))
+        .catch((err) => console.log(err))
 }
 
 function getEmailBody(emailData) {
