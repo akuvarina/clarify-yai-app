@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClarifyY.ai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./img/icon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+</head>
+<body>
+<section id="home" class="wrapper--white wrapper-home">
+    <header class="container wrapper header">
+        <img src="./img/logo.svg" alt="logo">
+        <button class="button button--white" data-toggle="modal" data-target="#contacts-form-modal">
+            Get a Demo
+        </button>
+    </header>
+    <section class="container wrapper">
+        <div class="container--50">
+            <article class="main-article">
+                <p>
+                    Does your company have employees working physical jobs in professions such as:
+                </p>
+                <ul class="container list">
+                    <li class="list-item">- Construction</li>
+                    <li class="list-item">- Logistic centers</li>
+                    <li class="list-item">- Factory</li>
+                    <li class="list-item">- Warehouse</li>
+                </ul>
+            </article>
+            <article>
+                <h1 class="title">Introducing ClarifyY.ai</h1>
+                <p>
+                    AI-powered service is designed to help teams be more productive and get measurable results every month.
+                </p>
+                <a class="button button--white button--link" href="#video">Watch the video</a>
+            </article>
+        </div>
+        <img class="img-50" src="./img/workspace-mockup.png" alt="workspace mockup">
+    </section>
+</section>
+
+<div class="modal fade" id="contacts-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-contacts" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <section class="wrapper--white modal--wrapper">
+                <div class="wrapper container">
+                    <article class="container--50 ">
+                        <h2 class="article-title">Hi There.</h2>
+                        <p class="article-paragraph">Are you ready to learn why ClarifyY.ai is the platform delivering expenses intelligence?</p>
+                        <div class="icon-container">
+                            <figure class="icon">
+                                <img class="icon-img" src="img/data-icon.svg" alt="data icon">
+                                <figcaption>Data</figcaption>
+                            </figure>
+                            <figure class="icon">
+                                <img class="icon-img" src="img/icon-analitics.svg" alt="analytics icon">
+                                <figcaption>Analytics</figcaption>
+                            </figure>
+                            <figure class="icon">
+                                <img class="icon-img" src="img/icon-insights.svg" alt="insights icon">
+                                <figcaption>Insights</figcaption>
+                            </figure>
+                            <figure class="icon">
+                                <img class="icon-img" src="img/icon-improvements.png" alt="improvements icon">
+                                <figcaption>Improvements</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+                    <form id="contacts-form" class="form wrapper--dark container">
+                        <h2 class="form-title">Leave your contacts</h2>
+                        <fieldset>
+                            <input id="firstName" name="firstName" type="text" placeholder="First name" class="input input--50 required"/>
+                            <input id="lastName" name="lastName" type="text" placeholder="Last name" class="input input--50 required"/>
+                            <input id="email" name="email" type="email" placeholder="Email" class="input input--100 required"/>
+                            <input id="job" name="job" type="text" placeholder="Job title" class="input input--50 required"/>
+                            <input id="company"  name="company" type="text" placeholder="Company name" class="input input--50 required"/>
+                            <input id="phone" name="phone" type="text" placeholder="Phone number" class="input input--100 required"/>
+                            <textarea id="comments" name="comments" class="textarea" placeholder="Comments"></textarea>
+                        </fieldset>
+                        <button
+                                type="button"
+                                class="button button--blue form-btn"
+                                id="submit"
+                                onClick="sendFormHandler()"
+                        >Request A Demo</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<section id="video" class="wrapper-video wrapper--dark">
+    <main class="wrapper container">
+        <article class="container--50">
+            <h2 class="article-title">
+                Hello.<br/>
+                Meet The ClarifyY.ai Platform.
+            </h2>
+            <p>Unlock the Power of Revenue Intelligence.</p>
+        </article>
+        <iframe
+                class="video"
+                src="https://www.youtube.com/embed/KYKaRTKMt_w"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+        ></iframe>
+    </main>
+</section>
+
+<section id="infograph" class="wrapper--infograph">
+    <main class="wrapper container">
+        <article>
+            <h2 class="article-title">
+                Finally, a True Understanding of What a "Good Job" looks Like.
+            </h2>
+            <p><b>
+                Turn on ClarifyY.ai to discover exactly what makes great employees truly great.
+            </b></p>
+
+            <p>
+                Analyze years of employees‘ work and their history.
+                Analytics runs in the background, and no action is required.
+                Define the playbook and set the bar for the team.
+            </p>
+        </article>
+        <img class="img-50" src="./img/infograph.png" alt="infograph"/>
+    </main>
+</section>
+
+<section class="wrapper--animation">
+    <figure class="wrapper animation-container">
+        <img class="animation"
+            srcset="./img/AI-1.gif 1400w, ./img/AI-2.gif 360w"
+            alt="animation"
+        >
+    </figure>
+</section>
+<footer class="wrapper--footer wrapper--white">
+    <main class="wrapper container">
+        <figure class="footer-logo footer-column">
+            <img src="./img/logo-footer.svg" alt="footer logo">
+            <figcaption>The Platform For Data-Driven Management</figcaption>
+        </figure>
+
+        <div class="footer-center footer-column">
+            <span class="info">Ready to Unlock the Power of Productivity Intelligence</span>
+            <button class="button button--blue button--footer" data-toggle="modal" data-target="#contacts-form-modal">Request A Demo</button>
+        </div>
+        <div class="footer-contact footer-column">
+            <h3 class="contact-title">Contact Us</h3>
+            <p>
+                Polus Tower II.<br/>
+                Vajnorská 100/B<br/>
+                831 04 Bratislava<br/>
+            </p>
+            <p>
+                +421 911 235 200<br/>
+                info@clarifyy.ai
+            </p>
+        </div>
+    </main>
+</footer>
+</body>
+</html>

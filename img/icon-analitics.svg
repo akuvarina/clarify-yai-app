@@ -1,0 +1,24 @@
+<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="41" cy="41" r="41" fill="#00204E"/>
+<rect x="66" y="59" width="2" height="50" rx="1" transform="rotate(90 66 59)" fill="white"/>
+<mask id="path-3-inside-1" fill="white">
+<rect x="20" y="39" width="10" height="22" rx="1"/>
+</mask>
+<rect x="20" y="39" width="10" height="22" rx="1" stroke="white" stroke-width="4" mask="url(#path-3-inside-1)"/>
+<mask id="path-4-inside-2" fill="white">
+<rect x="52" y="39" width="10" height="22" rx="1"/>
+</mask>
+<rect x="52" y="39" width="10" height="22" rx="1" stroke="white" stroke-width="4" mask="url(#path-4-inside-2)"/>
+<mask id="path-5-inside-3" fill="white">
+<rect x="28" y="29" width="10" height="32" rx="1"/>
+</mask>
+<rect x="28" y="29" width="10" height="32" rx="1" stroke="white" stroke-width="4" mask="url(#path-5-inside-3)"/>
+<mask id="path-6-inside-4" fill="white">
+<rect x="44" y="21" width="10" height="40" rx="1"/>
+</mask>
+<rect x="44" y="21" width="10" height="40" rx="1" stroke="white" stroke-width="4" mask="url(#path-6-inside-4)"/>
+<mask id="path-7-inside-5" fill="white">
+<rect x="36" y="43" width="10" height="18" rx="1"/>
+</mask>
+<rect x="36" y="43" width="10" height="18" rx="1" stroke="white" stroke-width="4" mask="url(#path-7-inside-5)"/>
+</svg>
