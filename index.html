@@ -10,11 +10,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./js/sendEmail.js"></script>
+    <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
 </head>
 <body>
-<section id="home" class="wrapper--white wrapper-home">
+<section id="home" class="wrapper--white wrapper--home">
     <header class="container wrapper header">
         <img src="./img/logo.svg" alt="logo">
         <button class="button button--white" data-toggle="modal" data-target="#contacts-form-modal">
@@ -24,7 +26,7 @@
     <section class="container wrapper">
         <div class="container--50">
             <article class="main-article">
-                <p>
+                <p class="home-info">
                     Does your company have employees working physical jobs in professions such as:
                 </p>
                 <ul class="container list">
@@ -36,7 +38,7 @@
             </article>
             <article>
                 <h1 class="title">Introducing ClarifyY.ai</h1>
-                <p>
+                <p class="home-info">
                     AI-powered service is designed to help teams be more productive and get measurable results every month.
                 </p>
                 <a class="button button--white button--link" href="#video">Watch the video</a>
@@ -143,23 +145,23 @@
 <section class="wrapper--animation">
     <figure class=" animation-container">
         <img class="wrapper animation"
-            srcset="./img/AI-1.gif 1400w, ./img/AI-2.gif 360w"
+            srcset="./img/AI-2-960.gif 1400w, ./img/AI-1-360.gif 500w"
             alt="animation"
         >
     </figure>
 </section>
 <footer class="wrapper--footer wrapper--white">
-    <main class="wrapper container">
-        <figure class="footer-logo footer-column">
+    <main class="wrapper container footer">
+        <figure class="footer-logo footer-column column-25">
             <img src="./img/logo-footer.svg" alt="footer logo">
             <figcaption>The Platform For Data-Driven Management</figcaption>
         </figure>
 
-        <div class="footer-center footer-column">
+        <div class="footer-center footer-column  column-50">
             <span class="info">Ready to Unlock the Power of Productivity Intelligence</span>
             <button class="button button--blue button--footer" data-toggle="modal" data-target="#contacts-form-modal">Request A Demo</button>
         </div>
-        <div class="footer-contact footer-column">
+        <div class="footer-contact footer-column  column-25">
             <h3 class="contact-title">Contact Us</h3>
             <p>
                 Polus Tower II.<br/>

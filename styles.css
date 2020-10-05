@@ -46,7 +46,7 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-fieldset {
+fieldset, p {
     margin: 0;
     padding: 0;
     border: none;
@@ -88,13 +88,13 @@ a {
     margin-right: 30px;
 }
 
-.wrapper-home {
+.wrapper--home {
     padding: 50px 0 15%;
     background-color: var(--light-blue-color);
     background-image: url("./img/background.png");
     background-position: 50%;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
     background-repeat: no-repeat;
 }
@@ -104,12 +104,13 @@ a {
 }
 
 .button {
-    padding: 10px 26px;
+    padding: 9px 26px;
     font-size: 1.8rem;
     border-radius: 6px;
     cursor: pointer;
     line-height: normal;
     font-family: 'Roboto', sans-serif;
+    border: 2px solid transparent;
 }
 
 .button--white {
@@ -120,7 +121,7 @@ a {
 .button--white:hover {
     background-color: var(--light-blue-color);
     color: var(--white-color);
-    border: 1px solid var(--white-color);
+    border: 2px solid var(--white-color);
 }
 
 .button--blue {
@@ -131,16 +132,17 @@ a {
 .button--blue:hover {
     background-color: var(--white-color);
     color: var(--light-blue-color);
-    border: 1px solid var(--light-blue-color);
+    border: 2px solid var(--light-blue-color);
 }
 
 .button--link {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid transparent;
 }
 
 .header {
-    margin-bottom: 10%;
+    margin-bottom: 7%;
 }
 
 .main-article {
@@ -150,6 +152,10 @@ a {
 .title {
     margin-bottom: 22px;
     font-size: 4.8rem;
+}
+
+.home-info {
+    margin-bottom: 25px;
 }
 
 .list {
@@ -194,7 +200,6 @@ a {
 }
 
 .footer-logo {
-    width: 24%;
     margin: 0;
 }
 
@@ -203,7 +208,11 @@ a {
 }
 
 .footer-center .info {
+    max-width: 420px;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .footer-center {
@@ -211,14 +220,17 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 20%;
+}
+
+.footer-contact {
+    text-align: center;
 }
 
 .footer-contact .contact-title {
     text-align: center;
-    width: 100%;
+    width: 50%;
     position: relative;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
 }
 
 .footer-contact .contact-title:after {
@@ -230,8 +242,12 @@ a {
     background-color: var(--white-color);
 }
 
-.footer-contact {
-    width: 10%;
+.column-25 {
+    width: 25%;
+}
+
+.column-50 {
+    width: 50%;
 }
 
 .button--footer {
@@ -249,7 +265,7 @@ a {
 .modal--wrapper {
     padding: 15% 0;
     background-color: var(--light-blue-color);
-    background-image: url("./img/background.png");
+    background-image: url("./img/modal-bg.png");
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -328,9 +344,10 @@ a {
     width: 100%;
     margin: 0;
 }
+
 .modal-open .modal {
-    padding: 0 !important;
-    overflow-y: hidden;
+    padding: 0 0 100px !important;
+    background-color: var(--light-blue-color);
 }
 
 .modal .close {
@@ -345,6 +362,10 @@ a {
 
 .invalid {
     border-color: #d25555;
+}
+
+.footer {
+    justify-content: center
 }
 
 @media (max-width: 1350px) {
@@ -399,6 +420,7 @@ a {
     .modal--wrapper .container {
         flex-direction: column;
     }
+
     .icon-container,
     .article-paragraph {
         margin-bottom: 25px;
@@ -411,7 +433,7 @@ a {
         margin: 0;
     }
 
-    .wrapper-home .img-50 {
+    .wrapper--home .img-50 {
         display: none;
     }
 
@@ -453,14 +475,20 @@ a {
         width: 100%;
         max-width: 100%;
     }
+
+    .animation-container {
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 550px) {
-    .wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
+    .wrapper--infograph, .wrapper-video {
+        padding: 50px 0;
     }
 
+    .home-info {
+        margin-bottom: 15px;
+    }
     .video {
         height: 10.5em;
     }
@@ -476,48 +504,110 @@ a {
     .input--50 {
         width: 100%;
     }
-}
 
-@media (max-width: 400px) {
-    .container{
-        padding-left: 10px;
-        padding-right: 10px;
+    .wrapper--home {
+        padding-top: 25px;
+        font-size: 2.0rem;
     }
-    body {
-        font-size: 2rem;
-    }
-    .container.header {
-        margin-bottom: 20px;
-    }
-    .main-article {
-        margin-bottom: 20px;
-    }
-    .wrapper-home {
-        padding-top: 30px;
-        padding-bottom: 30%;
-        min-height: 100%;
-    }
-    .container.header .button {
-        padding: 10px 12px;
-    }
-    .wrapper--footer {
-        padding-bottom: 20px;
-    }
+
     .modal--wrapper .article-title {
         margin-bottom: 10px;
         font-size: 2.5rem;
     }
+
     .modal--wrapper {
         padding: 20px;
         font-size: 1.4rem;
     }
+
     .form .textarea, .form-title, .modal--wrapper .article-paragraph {
         margin-bottom: 10px
     }
+
     .form {
         padding: 15px 10px;
     }
+
     .modal-open .modal {
         overflow: auto;
+    }
+
+    .modal--wrapper .article-title {
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+    }
+
+    .modal--wrapper {
+        padding: 20px;
+        font-size: 1.4rem;
+    }
+
+    .form .textarea, .form-title, .modal--wrapper .article-paragraph {
+        margin-bottom: 10px
+    }
+
+    .form {
+        padding: 15px 10px;
+    }
+
+    .modal-open .modal {
+        overflow: auto;
+    }
+
+    .modal .close {
+        right: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    body {
+        font-size: 2rem;
+    }
+
+    .container.header {
+        margin-bottom: 20px;
+    }
+
+    .main-article {
+        margin-bottom: 20px;
+    }
+
+    .wrapper--home {
+        padding-bottom: 20%;
+        min-height: 100%;
+    }
+
+    .container.header .button {
+        padding: 10px 12px;
+    }
+
+    .wrapper--footer {
+        padding-bottom: 20px;
+    }
+    .title {
+        font-size: 3.6rem;
+    }
+    .list {
+        flex-direction: row;
+    }
+    .list-item {
+        width: 49%;
+    }
+}
+
+@media (max-width: 330px) {
+    .wrapper--home {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-height: 800px) {
+    .header {
+        margin-bottom: 4%;
     }
 }

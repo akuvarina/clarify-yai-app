@@ -1,7 +1,7 @@
 const phoneReg = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 function sendFormHandler() {
     const formElements = document.getElementById('contacts-form').elements;
-    const obj = {};
+    const emailData = {};
     let isInvalid = false;
     for(let i = 0 ; i < formElements.length ; i++){
         const item = formElements.item(i);
@@ -11,13 +11,20 @@ function sendFormHandler() {
         }
 
         if (item.name) {
-            obj[item.name] = item.value;
+            emailData[item.name] = item.value;
         }
     }
 
     if (!isInvalid) {
         $('#contacts-form-modal').modal('hide');
-        console.log(obj);
+        sendEmail(emailData);
+        cleanInputs(formElements);
+    }
+}
+
+function cleanInputs(inputs) {
+    for(let i = 0 ; i < inputs.length ; i++){
+        inputs.item(i).value = '';
     }
 }
 
