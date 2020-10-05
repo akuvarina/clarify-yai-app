@@ -191,11 +191,14 @@ a {
     max-height: 100vh;
 }
 
+.infograph-container {
+    width: 35%;
+}
+
 .animation-container {
     display: flex;
     justify-content: center;
     background: radial-gradient(var(--light-blue-color-80) 50%, var(--light-blue-color));
-    margin-bottom: 60px;
 }
 
 .wrapper--footer {
@@ -627,5 +630,9 @@ a {
 @media (max-height: 800px) {
     .header {
         margin-bottom: 4%;
+    }
+
+    .infograph-container {
+        width: 30%;
     }
 }
