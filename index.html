@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>ClarifyY.ai</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="./img/icon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="./img/icon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://fast.wistia.com/embed/medias/kw1izo2k8v.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./js/sendEmail.js"></script>
     <script src="./js/index.js"></script>
-    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <link rel="stylesheet" href="./styles.css" type="text/css"/>
 </head>
 <body>
 <section id="home" class="wrapper--white wrapper--home">
@@ -39,16 +48,19 @@
             <article>
                 <h1 class="title">Introducing ClarifyY.ai</h1>
                 <p class="home-info">
-                    AI-powered service is designed to help teams be more productive and get measurable results every month.
+                    AI-powered service is designed to help teams be more productive and get measurable results every
+                    month.
                 </p>
-                <a class="button button--white button--link" href="#video">Watch the video</a>
+                <button class="button button--white" data-toggle="modal" data-target="#video-modal">
+                    Watch the video
+                </button>
             </article>
         </div>
         <img class="img-50" src="./img/workspace-mockup.png" alt="workspace mockup">
     </section>
 </section>
 
-<div class="modal fade" id="contacts-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="contacts-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-contacts" role="document">
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -59,7 +71,8 @@
                 <div class="wrapper container">
                     <article class="container--50 ">
                         <h2 class="article-title">Hi There.</h2>
-                        <p class="article-paragraph">Are you ready to learn why ClarifyY.ai is the platform delivering expenses intelligence?</p>
+                        <p class="article-paragraph">Are you ready to learn why ClarifyY.ai is the platform delivering
+                            expenses intelligence?</p>
                         <div class="icon-container">
                             <figure class="icon">
                                 <img class="icon-img" src="img/data-icon.svg" alt="data icon">
@@ -82,12 +95,18 @@
                     <form id="contacts-form" class="form wrapper--dark container">
                         <h2 class="form-title">Leave your contacts</h2>
                         <fieldset>
-                            <input id="firstName" name="firstName" type="text" placeholder="First name" class="input input--50 required"/>
-                            <input id="lastName" name="lastName" type="text" placeholder="Last name" class="input input--50 required"/>
-                            <input id="email" name="email" type="email" placeholder="Email" class="input input--100 required"/>
-                            <input id="job" name="job" type="text" placeholder="Job title" class="input input--50 required"/>
-                            <input id="company"  name="company" type="text" placeholder="Company name" class="input input--50 required"/>
-                            <input id="phone" name="phone" type="text" placeholder="Phone number" class="input input--100 required"/>
+                            <input id="firstName" name="firstName" type="text" placeholder="First name"
+                                   class="input input--50 required"/>
+                            <input id="lastName" name="lastName" type="text" placeholder="Last name"
+                                   class="input input--50 required"/>
+                            <input id="email" name="email" type="email" placeholder="Email"
+                                   class="input input--100 required"/>
+                            <input id="job" name="job" type="text" placeholder="Job title"
+                                   class="input input--50 required"/>
+                            <input id="company" name="company" type="text" placeholder="Company name"
+                                   class="input input--50 required"/>
+                            <input id="phone" name="phone" type="text" placeholder="Phone number"
+                                   class="input input--100 required"/>
                             <textarea id="comments" name="comments" class="textarea" placeholder="Comments"></textarea>
                         </fieldset>
                         <button
@@ -95,10 +114,28 @@
                                 class="button button--blue form-btn"
                                 id="submit"
                                 onClick="sendFormHandler()"
-                        >Request A Demo</button>
+                        >Request A Demo
+                        </button>
                     </form>
                 </div>
             </section>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-video" role="document">
+        <div class="wistia_responsive_padding video">
+            <div class="wistia_responsive_wrapper">
+                <div class="wistia_embed wistia_async_kw1izo2k8v videoFoam=true">
+                    <div class="wistia_swatch">
+                        <img src="https://fast.wistia.com/embed/medias/kw1izo2k8v/swatch"
+                             alt=""
+                             aria-hidden="true" onload="this.parentNode.style.opacity=1;"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -112,13 +149,21 @@
             </h2>
             <p>Unlock the Power of Revenue Intelligence.</p>
         </article>
-        <iframe
-                class="video"
-                src="https://www.youtube.com/embed/KYKaRTKMt_w"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-        ></iframe>
+        <button class="video-button" data-toggle="modal" data-target="#video-modal">
+            <img src="./img/video.png" alt="video" />
+        </button>
+    </main>
+</section>
+
+<section class="wrapper--animation wrapper--white">
+    <main class="wrapper">
+        <h2 class="article-title">More Visibility</h2>
+        <figure class="animation-container">
+            <img class="wrapper animation"
+                 srcset="./img/AI-2-960.gif 1400w, ./img/AI-1-360.gif 500w"
+                 alt="animation"
+            >
+        </figure>
     </main>
 </section>
 
@@ -144,37 +189,34 @@
     </main>
 </section>
 
-<section class="wrapper--animation">
-    <figure class=" animation-container">
-        <img class="wrapper animation"
-            srcset="./img/AI-2-960.gif 1400w, ./img/AI-1-360.gif 500w"
-            alt="animation"
-        >
-    </figure>
-</section>
 <footer class="wrapper--footer wrapper--white">
-    <main class="wrapper container footer">
-        <figure class="footer-logo footer-column column-25">
-            <img src="./img/logo-footer.svg" alt="footer logo">
-            <figcaption>The Platform For Data-Driven Management</figcaption>
-        </figure>
+    <main class="wrapper">
+       <section class="footer">
+           <figure class="footer-logo footer-column column-25">
+               <img src="./img/logo-footer.svg" alt="footer logo">
+               <figcaption>The Platform For Data-Driven Management</figcaption>
+           </figure>
 
-        <div class="footer-center footer-column  column-50">
-            <span class="info">Ready to Unlock the Power of Productivity Intelligence</span>
-            <button class="button button--blue button--footer" data-toggle="modal" data-target="#contacts-form-modal">Request A Demo</button>
-        </div>
-        <div class="footer-contact footer-column  column-25">
-            <h3 class="contact-title">Contact Us</h3>
-            <p>
-                Polus Tower II.<br/>
-                Vajnorská 100/B<br/>
-                831 04 Bratislava<br/>
-            </p>
-            <p>
-                +421 911 235 200<br/>
-                info@clarifyy.ai
-            </p>
-        </div>
+           <div class="footer-center footer-column  column-50">
+               <span class="info">Ready to Unlock the Power of Productivity Intelligence</span>
+               <button class="button button--blue button--footer" data-toggle="modal" data-target="#contacts-form-modal">
+                   Request A Demo
+               </button>
+           </div>
+           <div class="footer-contact footer-column  column-25">
+               <h3 class="contact-title">Contact Us</h3>
+               <p class="contact-address">
+                   Polus Tower II.<br/>
+                   Vajnorská 100/B<br/>
+                   831 04 Bratislava<br/>
+               </p>
+               <p>
+                   +421 911 235 200<br/>
+                   info@clarifyy.ai
+               </p>
+           </div>
+       </section>
+        <span class="footer-text">Copyright © 2020 ClarifyY.ai. All rights reserved.</span>
     </main>
 </footer>
 </body>

@@ -86,6 +86,7 @@ a {
 .container--50 {
     width: 49%;
     margin-right: 30px;
+    margin-bottom: 15px;
 }
 
 .wrapper--home {
@@ -174,12 +175,68 @@ a {
 .article-title {
     font-size: 3.6rem;
     margin-bottom: 22px;
+    font-weight: 300;
+}
+
+.wrapper--animation .article-title {
+    text-align: center;
 }
 
 .video {
-    width: 50%;
-    height: 14em;
+    width: 100%;
     border-radius: 10px;
+}
+
+.video .wistia_responsive_wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.video .wistia_embed.wistia_async_kw1izo2k8v {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.video-button img {
+    border-radius: 10px;
+}
+
+.video-button {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.video .w-chrome, .video .wistia_swatch {
+    border-radius: 10px;
+}
+
+.video .wistia_swatch {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity 200ms;
+    width: 100%;
+}
+
+.video img {
+    filter: blur(5px);
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+#video-modal .modal-video {
+    max-width: 80%;
+}
+
+.modal-open #video-modal.modal {
+    top: 5%;
+    width: 100%;
+    overflow-y: hidden;
 }
 
 .wrapper--infograph .article {
@@ -195,14 +252,18 @@ a {
     width: 35%;
 }
 
+.wrapper--animation {
+    padding: 50px 0;
+    background: var(--light-blue-color);
+}
+
 .animation-container {
     display: flex;
     justify-content: center;
-    background: radial-gradient(var(--light-blue-color-80) 50%, var(--light-blue-color));
 }
 
 .wrapper--footer {
-    padding: 50px 0;
+    padding: 100px 0 30px;
     background-color: var(--dark-blue-color);
     font-size: 1.6rem;
 }
@@ -220,6 +281,7 @@ a {
     font-size: 2.4rem;
     line-height: 2.8rem;
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 .footer-center {
@@ -229,28 +291,14 @@ a {
     text-align: center;
 }
 
-.footer-contact {
-    text-align: center;
-}
-
+.footer-contact .contact-address,
 .footer-contact .contact-title {
-    text-align: center;
-    width: 50%;
-    position: relative;
-    margin: 0 auto 25px;
-}
-
-.footer-contact .contact-title:after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--white-color);
+    margin-bottom: 30px;
 }
 
 .column-25 {
-    width: 25%;
+    width: 121px;
+    padding-top: 170px;
 }
 
 .column-50 {
@@ -354,7 +402,7 @@ a {
     margin: 0;
 }
 
-.modal-open .modal {
+.modal-open #contacts-form-modal.modal {
     padding: 0 !important;
     background-color: var(--light-blue-color);
     overflow-y: hidden;
@@ -375,7 +423,18 @@ a {
 }
 
 .footer {
-    justify-content: center
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.footer-text {
+    display: block;
+    font-weight: 300;
+}
+.modal-dialog {
+    margin: 0 auto;
 }
 
 @media (max-width: 330px) {
@@ -388,14 +447,21 @@ a {
     .header {
         margin-bottom: 2%;
     }
+
     .wrapper--home {
         padding: 20px 0 10%;
     }
+
     .infograph-container {
         width: 30%;
     }
 }
 
+@media (max-height: 900px) {
+    #video-modal .modal-video {
+        max-width: 70%;
+    }
+}
 
 @media (max-width: 1350px) {
     .wrapper {
@@ -403,16 +469,8 @@ a {
         padding-right: 50px;
     }
 
-    .footer-contact {
-        width: 15%;
-    }
-
-    .footer-logo {
-        width: 30%;
-    }
-
-    .footer-center {
-        width: 45%;
+    .modal-open #video-modal.modal {
+        top: 10%
     }
 }
 
@@ -479,17 +537,23 @@ a {
         height: 15em;
     }
 
-    .footer-column {
-        margin-bottom: 30px;
-        display: flex;
+    .footer {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .footer-text {
+        text-align: center;
     }
 
     .footer-column {
-        width: 100%;
+        margin-bottom: 30px;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        width: 100%;
     }
 
     .footer-contact .contact-title {
@@ -505,19 +569,25 @@ a {
         max-width: 100%;
     }
 
-    .animation-container {
-        margin-bottom: 50px;
-    }
-
     .wrapper--infograph .article {
         margin-bottom: 10px;
         width: 100%;
     }
+
     .wrapper--infograph {
         max-height: 100%;
     }
+
     .infograph-container {
         width: 80%;
+    }
+
+    .modal-open #video-modal.modal {
+        top: 25%;
+    }
+
+    #video-modal .modal-video {
+        max-width: 95%;
     }
 }
 
@@ -529,9 +599,11 @@ a {
     .home-info {
         margin-bottom: 12%;
     }
+
     .title {
         margin: 5% 10px;
     }
+
     .video {
         height: 10.5em;
     }
@@ -593,10 +665,6 @@ a {
         padding: 15px 10px;
     }
 
-    .modal-open .modal {
-        overflow: auto;
-    }
-
     .modal .close {
         right: 20px;
     }
@@ -623,6 +691,7 @@ a {
     .wrapper--home {
         padding-bottom: 20%;
         min-height: 100%;
+        height: 100%;
     }
 
     .container.header .button {
@@ -632,12 +701,15 @@ a {
     .wrapper--footer {
         padding-bottom: 20px;
     }
+
     .title {
         font-size: 3.6rem;
     }
+
     .list {
         flex-direction: row;
     }
+
     .list-item {
         width: 49%;
     }
@@ -647,5 +719,26 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .textarea, .input {
+        padding: 5px 10px;
+    }
+
+    .textarea {
+        height: 50px;
+    }
+}
+
+@media (max-width: 330px) {
+    .container.header {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media (max-height: 700px) {
+    .modal-open #contacts-form-modal.modal {
+        overflow-y: auto;
     }
 }
