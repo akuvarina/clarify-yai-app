@@ -30,7 +30,7 @@ function cleanInputs(inputs) {
 
 document.addEventListener('DOMContentLoaded', loadHandler);
 
-function loadHandler() {
+function loadHandler(params) {
     const inputs = document.querySelectorAll('input.input.required');
     for (let i = 0; i < inputs.length; i++) {
         const input = inputs[i];
@@ -68,3 +68,4 @@ function loadHandler() {
 
     document.removeEventListener('DOMContentLoaded', loadHandler);
 }
+
