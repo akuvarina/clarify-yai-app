@@ -22,43 +22,119 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./js/sendEmail.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/router.js"></script>
     <link rel="stylesheet" href="./styles.css" type="text/css"/>
 </head>
 <body>
-<section id="home" class="wrapper--white wrapper--home">
-    <header class="container wrapper header">
-        <img src="./img/logo.svg" alt="logo">
+<section class="wrapper--white header">
+    <header class="container wrapper">
+        <a href="#logo" onclick="navigateToHome()" id="logo"><img src="./img/logo.svg" alt="logo"></a>
         <button class="button button--white" data-toggle="modal" data-target="#contacts-form-modal">
             Get a Demo
         </button>
     </header>
-    <section class="container wrapper container--home">
-        <div class="container--50">
-            <article class="main-article">
-                <h1 class="title">Introducing ClarifyY.ai</h1>
-                <p class="home-info">
-                    AI-powered service is designed to help teams be more productive and get measurable results every
-                    month.
-                </p>
-            </article>
-            <article>
-                <p class="home-info">
-                    Does your company have employees working physical jobs in professions such as:
-                </p>
-                <ul class="list">
-                    <li class="list-item">- Construction</li>
-                    <li class="list-item">- Logistic centers</li>
-                    <li class="list-item">- Factory</li>
-                    <li class="list-item">- Warehouse</li>
-                </ul>
-                <button class="button button--white" data-toggle="modal" data-target="#video-modal">
-                    Watch the video
-                </button>
-            </article>
-        </div>
-        <img class="home-img" src="./img/workspace-mockup.png" alt="workspace mockup">
-    </section>
 </section>
+
+<main id="main">
+    <section id="home" class="wrapper--white wrapper--home">
+        <section class="container wrapper container--home">
+            <div class="container--50">
+                <article class="main-article">
+                    <h1 class="title">Introducing ClarifyY.ai</h1>
+                    <p class="home-info">
+                        AI-powered service is designed to help teams be more productive and get measurable results every
+                        month.
+                    </p>
+                </article>
+                <article>
+                    <p class="home-info">
+                        Does your company have employees working physical jobs in professions such as:
+                    </p>
+                    <ul class="list">
+                        <li class="list-item">- Construction</li>
+                        <li class="list-item">- Logistic centers</li>
+                        <li class="list-item">- Factory</li>
+                        <li class="list-item">- Warehouse</li>
+                    </ul>
+                    <button class="button button--white" data-toggle="modal" data-target="#video-modal">
+                        Watch the video
+                    </button>
+                </article>
+            </div>
+            <img class="home-img" src="./img/workspace-mockup.png" alt="workspace mockup">
+        </section>
+    </section>
+
+    <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-video" role="document">
+            <div class="wistia_responsive_padding video">
+                <div class="wistia_responsive_wrapper">
+                    <div class="wistia_embed wistia_async_kw1izo2k8v videoFoam=true">
+                        <div class="wistia_swatch">
+                            <img src="https://fast.wistia.com/embed/medias/kw1izo2k8v/swatch"
+                                 alt=""
+                                 aria-hidden="true" onload="this.parentNode.style.opacity=1;"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="video" class="wrapper-video wrapper--dark">
+        <main class="wrapper container">
+            <article class="container--50">
+                <h2 class="article-title">
+                    Hello.<br/>
+                    Meet The ClarifyY.ai Platform.
+                </h2>
+                <p>Unlock the Power of Revenue Intelligence.</p>
+            </article>
+            <button class="video-button" data-toggle="modal" data-target="#video-modal">
+                <img src="./img/video.png" alt="video" />
+            </button>
+        </main>
+    </section>
+
+    <section class="wrapper--animation wrapper--white">
+        <main class="wrapper">
+            <h2 class="article-title">More Visibility</h2>
+            <figure class="animation-container">
+                <img class="animation"
+                     src="./img/visibility.png"
+                     alt="animation"
+                >
+            </figure>
+        </main>
+    </section>
+
+    <section id="infograph" class="wrapper--infograph">
+        <main class="wrapper container">
+            <article class="article">
+                <h2 class="article-title">
+                    Finally, a True Understanding of What a "Good Job" looks Like.
+                </h2>
+                <p class="article-info">
+                    Turn on ClarifyY.ai to discover exactly what makes great employees truly great.
+                </p>
+
+                <p>
+                    Analyze years of employees‘ work and their history.
+                    Analytics runs in the background, and no action is required.
+                    Define the playbook and set the bar for the team.
+                </p>
+            </article>
+            <div class="infograph-container">
+                <img src="./img/infograph.png" alt="infograph"/>
+            </div>
+        </main>
+    </section>
+</main>
+
+<main id="thanks" class="hidden">
+    <h1>Thank you</h1>
+</main>
 
 <div class="modal fade" id="contacts-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-contacts" role="document">
@@ -122,73 +198,6 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-video" role="document">
-        <div class="wistia_responsive_padding video">
-            <div class="wistia_responsive_wrapper">
-                <div class="wistia_embed wistia_async_kw1izo2k8v videoFoam=true">
-                    <div class="wistia_swatch">
-                        <img src="https://fast.wistia.com/embed/medias/kw1izo2k8v/swatch"
-                             alt=""
-                             aria-hidden="true" onload="this.parentNode.style.opacity=1;"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section id="video" class="wrapper-video wrapper--dark">
-    <main class="wrapper container">
-        <article class="container--50">
-            <h2 class="article-title">
-                Hello.<br/>
-                Meet The ClarifyY.ai Platform.
-            </h2>
-            <p>Unlock the Power of Revenue Intelligence.</p>
-        </article>
-        <button class="video-button" data-toggle="modal" data-target="#video-modal">
-            <img src="./img/video.png" alt="video" />
-        </button>
-    </main>
-</section>
-
-<section class="wrapper--animation wrapper--white">
-    <main class="wrapper">
-        <h2 class="article-title">More Visibility</h2>
-        <figure class="animation-container">
-            <img class="animation"
-                 src="./img/visibility.png"
-                 alt="animation"
-            >
-        </figure>
-    </main>
-</section>
-
-<section id="infograph" class="wrapper--infograph">
-    <main class="wrapper container">
-        <article class="article">
-            <h2 class="article-title">
-                Finally, a True Understanding of What a "Good Job" looks Like.
-            </h2>
-            <p class="article-info">
-                Turn on ClarifyY.ai to discover exactly what makes great employees truly great.
-            </p>
-
-            <p>
-                Analyze years of employees‘ work and their history.
-                Analytics runs in the background, and no action is required.
-                Define the playbook and set the bar for the team.
-            </p>
-        </article>
-        <div class="infograph-container">
-            <img src="./img/infograph.png" alt="infograph"/>
-        </div>
-    </main>
-</section>
-
 <footer class="wrapper--footer wrapper--white">
     <main class="wrapper">
        <section class="footer">

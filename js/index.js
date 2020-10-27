@@ -31,6 +31,7 @@ function cleanInputs(inputs) {
 document.addEventListener('DOMContentLoaded', loadHandler);
 
 function loadHandler(params) {
+    checkURL();
     const inputs = document.querySelectorAll('input.input.required');
     for (let i = 0; i < inputs.length; i++) {
         const input = inputs[i];
