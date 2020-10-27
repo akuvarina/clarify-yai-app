@@ -6,7 +6,7 @@ function checkURL() {
     const hash = window.location.hash;
     const main = document.getElementById('main');
     const hashThanks = document.getElementById('thanks');
-    if (hash === '#thanks') {
+    if (hash && hash.includes('#thanks')) {
         main.classList.add('hidden');
         hashThanks.classList.remove('hidden');
     } else {
