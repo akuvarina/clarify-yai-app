@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ff3dc72-6860-4c13-9bdd-405daa16dc38" name="Default Changelist" comment="updated">
+    <list default="true" id="5ff3dc72-6860-4c13-9bdd-405daa16dc38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/icon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,9 @@
       <workItem from="1602143763867" duration="39000" />
       <workItem from="1602868579705" duration="627000" />
       <workItem from="1603820557012" duration="2691000" />
-      <workItem from="1603823545269" duration="3971000" />
+      <workItem from="1603823545269" duration="4064000" />
+      <workItem from="1603872999952" duration="145000" />
+      <workItem from="1605289966036" duration="3115000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1601915498364</created>
@@ -110,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603826780955</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated">
+      <created>1603827523371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603827523372</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,18 +135,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602054378395" />
-    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1603827124369">
+    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1603827522523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="87" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603827124369" />
+    <state x="585" y="87" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603827522523" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603822498029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603822498029" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603826798327">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603827524665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603826798327" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603827524665" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602016083672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
